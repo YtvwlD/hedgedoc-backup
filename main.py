@@ -1,7 +1,13 @@
 #!/usr/bin/env python3
 
 from pathlib import Path
-import huepy
+try:
+    import huepy  # type: ignore
+except ImportError:
+    class huepy:
+        def bad(text: str) -> str:
+            return "[-] " + text
+    
 from sys import argv
 
 if len(argv) == 1:
