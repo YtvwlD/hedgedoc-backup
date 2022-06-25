@@ -5,6 +5,8 @@ name = "pypi"
 
 [packages]
 huepy = "*"
+tqdm = "*"
+requests = "*"
 
 [dev-packages]
 mypy = "*"
