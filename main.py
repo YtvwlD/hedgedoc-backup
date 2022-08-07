@@ -46,6 +46,8 @@ if files_in_current_dir:
 
 with history_file.open("rt") as f:
     history = json.load(f)
+    if type(history) == dict and "history" in history.keys():
+        history = history["history"]
 
 session = Session()
 try:
